@@ -42,7 +42,7 @@ function generateInteger(max) {
 
 
 
-grid.addEventListener('click', (e) => {
+grid.addEventListener('mouseover', (e) => {
     if (e.target.matches('.box')) {
         randomNumber = generateInteger(cssClass.length);
         e.target.classList.add(cssClass[randomNumber]);
