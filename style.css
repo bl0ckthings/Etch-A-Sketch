@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --color-blue: #457b9d;
+
+}
+
+.main-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 2px;
+
+
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+button {
+    cursor: pointer;
+    max-width: fit-content;
+    align-self: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.247);
+    border: 2px solid var(--color-blue);
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.4s ease;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+button:hover {
+    background-color: #457b9d;
+    color: white;
+
+
+}
+
+.grid {
+
+    -webkit-box-shadow: 4px 5px 15px 5px #575757;
+    box-shadow: 4px 5px 15px 5px #575757;
+    display: flex;
+    width: 50rem;
+    height: 50rem;
+    position: relative;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 1px solid white;
+    border-radius: 10px;
+
+}
+
+.box {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.box.blue {
+    background-color: var(--color-blue);
+}
+
+.box.black {
+    background-color: black;
+}
+
+.box.red {
+    background-color: lightcoral;
+}
+
+.box.green {
+    background-color: greenyellow;
+}
+
+.box.purple {
+    background-color: purple;
+}
+
+
+/* .box:hover {
+    background-color: var(--color-blue);
+} */
