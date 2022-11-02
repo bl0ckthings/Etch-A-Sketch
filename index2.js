@@ -1,10 +1,12 @@
 const container = document.querySelector('.main-container');
 const grid = document.createElement('div');
 const btn = document.createElement('button');
+const btnTwo = document.querySelector('#btn2');
 let cssClass = ['blue', 'black', 'red', 'green', 'purple'];
 let squareSize = 8;
 var maxLimit = 100;
 let randomNumber;
+
 container.appendChild(grid);
 grid.classList.add('grid');
 
@@ -47,16 +49,26 @@ grid.addEventListener('mouseover', (e) => {
         randomNumber = generateInteger(cssClass.length);
         e.target.classList.add(cssClass[randomNumber]);
     }
-}, true)
+})
 
 btn.addEventListener('click', () => {
 
     do {
 
-        var userSquare = prompt('Enter the number of square you want ! (Between 1 and 100)');
+        userSquare = prompt('Enter the number of square you want ! (Between 1 and 100)');
 
     } while (isNaN(userSquare) || userSquare >= maxLimit || userSquare == null);
     $('.box').remove();
     createGrid(userSquare);
 }
 )
+
+btnTwo.addEventListener('click', () => {
+    // $('.box').remove();
+
+    while (grid.firstChild) {
+        grid.removeChild(grid.lastChild);
+
+    }
+    createGrid(squareSize);
+});
