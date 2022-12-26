@@ -2,10 +2,12 @@ const container = document.querySelector('.main-container');
 const grid = document.createElement('div');
 const btn = document.createElement('button');
 const btnTwo = document.querySelector('#btn2');
+const btnThree = document.querySelector('#btn3');
 let cssClass = ['blue', 'black', 'red', 'green', 'purple'];
 let squareSize = 8;
 var maxLimit = 100;
 let randomNumber;
+let userColor;
 
 container.appendChild(grid);
 grid.classList.add('grid');
@@ -46,10 +48,13 @@ function generateInteger(max) {
 
 grid.addEventListener('mouseover', (e) => {
     if (e.target.matches('.box')) {
-        randomNumber = generateInteger(cssClass.length);
-        e.target.classList.add(cssClass[randomNumber]);
+        // randomNumber = generateInteger(cssClass.length);
+        e.target.style.backgroundColor = `${btnThree.value}`;
+
     }
 })
+
+
 
 btn.addEventListener('click', () => {
 
@@ -72,3 +77,10 @@ btnTwo.addEventListener('click', () => {
     }
     createGrid(squareSize);
 });
+
+
+// btnThree.addEventListener('click', () => {
+//     userColor = prompt('What color do you want ? :)');
+
+// })
+
